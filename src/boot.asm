@@ -14,10 +14,14 @@ mov bx, 0x9000
 call println
 
 mov bx, HELLO
-call print
+call println
+
+mov bx, HEX_TEST
+call printhex
 
 jmp $
 
+HEX_TEST: db 0xfa, 0xce 
 HELLO: db "Hello", 0
 BOOT_DRIVE: db 0
 
